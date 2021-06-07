@@ -26,7 +26,7 @@ gsap.registerPlugin (DrawSVGPlugin);
         let tl = gsap.timeline();
 
 
-        gsap.set(["#outline-dash", "#icons", "#music", "#weather", "#speedometer", "#leather"], {alpha:0})
+        gsap.set(["#outline-dash", "#icons", "#music", "#weather", "#leather"], {alpha:0})
 
         tl.from ("#Jag-logo",{duration:1, alpha:0, scale:10, transformOrigin:"center"})
         .from ("#_Text_",{duration:1, alpha:0})
@@ -52,6 +52,8 @@ gsap.registerPlugin (DrawSVGPlugin);
         
         .from ("#_fuel-tabs_",{duration:1, alpha:0})
         .to ("#_pump_",{duration:1, scale:150, transformOrigin: "center"})
+
+        .to ("#fuel-indicator",{duration:1, alpha:0})
 
 
 
