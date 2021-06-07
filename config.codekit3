@@ -40,6 +40,14 @@
       "sC" : 3,
       "tS" : 0
     },
+    "\/deploy\/svg-container.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/deploy\/svg-container.html",
+      "oF" : 0
+    },
     "\/design\/elements-4-01 (1).svg" : {
       "ft" : 2097152,
       "miP" : 0,
@@ -49,14 +57,6 @@
       "opt" : 0,
       "plM" : 52780316221407,
       "prP" : 0
-    },
-    "\/dev\/content\/outline-dash.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/dev\/content\/outline-dash.html",
-      "oF" : 0
     },
     "\/dev\/content\/outline-dash.kit" : {
       "cB" : 0,
