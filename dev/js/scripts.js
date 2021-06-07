@@ -42,6 +42,33 @@ gsap.registerPlugin (DrawSVGPlugin);
 
     }
 
+
+    function FuelTL(){
+        let tl = gsap.timeline();
+
+
+
+
+
+
+
+
+
+
+
+
+        return tl;
+
+    }
+
+
+
+
+
+
+
+
+
     function SpeedTL(){
         let tl = gsap.timeline();
 
@@ -69,6 +96,7 @@ gsap.set('#svg-container',{visibility:"visible"});
 //3. BUILD Main timeline
 mainTL.add(fadeInTL())
       .add(SpeedTL())
+      .add(FuelTL())
 
 
 
