@@ -25,6 +25,17 @@ gsap.registerPlugin (DrawSVGPlugin);
     function fadeInTL(){
         let tl = gsap.timeline();
 
+
+        gsap.set(["#outline-dash", "#icons", "#fuel-indicator", "#speedometer", "#music", "#weather", "#leather"], {alpha:0})
+
+        tl.from ("#Jag-logo",{duration:1, alpha:0, scale:10, transformOrigin:"center"})
+        .from ("#_Text_",{duration:1, alpha:0})
+        .to("#Jag-logo", {duration:1, scale:2.5, transformOrigin:"center"})
+        .from ("#Jag-logo",{duration:1, rotation:"360", transformOrigin:"center"})
+    
+    
+    
+
         return tl;
 
     }
