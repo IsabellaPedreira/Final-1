@@ -50,7 +50,8 @@ gsap.registerPlugin (DrawSVGPlugin);
         tl.to ("#fuel-indicator",{duration:1, y:"-=135", x:"-=200"}, "f1")
 
         
-        .from ("#_fuel-tabs_",{duration:1, alpha:0,})
+        .from ("#_fuel-tabs_",{duration:1, alpha:0})
+        .to ("#_pump_",{duration:1, scale:150, transformOrigin: "center"})
 
 
 
