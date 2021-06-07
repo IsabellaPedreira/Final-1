@@ -26,7 +26,7 @@ gsap.registerPlugin (DrawSVGPlugin);
         let tl = gsap.timeline();
 
 
-        gsap.set(["#outline-dash", "#icons", "#fuel-indicator", "#music", "#weather", "#leather"], {alpha:0})
+        gsap.set(["#outline-dash", "#icons", "#music", "#weather", "#speedometer", "#leather"], {alpha:0})
 
         tl.from ("#Jag-logo",{duration:1, alpha:0, scale:10, transformOrigin:"center"})
         .from ("#_Text_",{duration:1, alpha:0})
@@ -46,8 +46,11 @@ gsap.registerPlugin (DrawSVGPlugin);
     function FuelTL(){
         let tl = gsap.timeline();
 
+        tl.from ("#fuel-indicator",{duration:1, alpha:0, scale:"-10", transformOrigin:"center"}, "f1")
+        tl.to ("#fuel-indicator",{duration:1, y:"-=135", x:"-=200"}, "f1")
 
-
+        
+        .from ("#_fuel-tabs_",{duration:1, alpha:0,})
 
 
 
@@ -95,8 +98,9 @@ gsap.set('#svg-container',{visibility:"visible"});
 
 //3. BUILD Main timeline
 mainTL.add(fadeInTL())
+    .add(FuelTL())
       .add(SpeedTL())
-      .add(FuelTL())
+     
 
 
 
