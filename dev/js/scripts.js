@@ -48,7 +48,9 @@ gsap.registerPlugin (DrawSVGPlugin);
         tl.from ("#speedometer",{duration:1, alpha:0, scale:10, transformOrigin:"center"}, "sp")
         .to ("#speedometer",{duration:1, y:"-=100", x:"+=133"}, "sp")
 
+        .from ("#_red-arrow_",{duration:1, rotation:"180",transformOrigin:"right"})
 
+        .from ("#numbers",{duration:.5, alpha:0, scale:3} )
 
         return tl;
 
