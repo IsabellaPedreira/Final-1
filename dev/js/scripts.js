@@ -26,12 +26,14 @@ gsap.registerPlugin (DrawSVGPlugin);
         let tl = gsap.timeline();
 
 
-        gsap.set(["#outline-dash", "#icons", "#fuel-indicator", "#speedometer", "#music", "#weather", "#leather"], {alpha:0})
+        gsap.set(["#outline-dash", "#icons", "#fuel-indicator", "#music", "#weather", "#leather"], {alpha:0})
 
         tl.from ("#Jag-logo",{duration:1, alpha:0, scale:10, transformOrigin:"center"})
         .from ("#_Text_",{duration:1, alpha:0})
         .to("#Jag-logo", {duration:1, scale:2.5, transformOrigin:"center"})
-        .from ("#Jag-logo",{duration:1, rotation:"360", transformOrigin:"center"})
+        .from ("#Jag-logo",{duration:1, rotation:"360", transformOrigin:"center"}, "jl")
+        .to("#Jag-logo", {duration:1, y:"+=128"}, "jl")
+        .to("#Jag-logo", {duration:1, alpha:0})
     
     
     
@@ -39,6 +41,22 @@ gsap.registerPlugin (DrawSVGPlugin);
         return tl;
 
     }
+
+    function SpeedTL(){
+        let tl = gsap.timeline();
+
+        tl.from ("#speedometer",{duration:1, alpha:0, scale:10, transformOrigin:"center"}, "sp")
+        .to ("#speedometer",{duration:1, y:"-=100", x:"+=133"}, "sp")
+
+
+
+        return tl;
+
+    }
+
+
+
+
 
     //1. set initial properties
 init();
@@ -48,9 +66,8 @@ gsap.set('#svg-container',{visibility:"visible"});
 
 //3. BUILD Main timeline
 mainTL.add(fadeInTL())
-.add(dashboardTL())
-.add(menuTL())
-.add(musicTL())
+      .add(SpeedTL())
+
 
 
 
