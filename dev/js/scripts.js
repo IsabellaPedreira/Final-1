@@ -17,7 +17,7 @@ gsap.registerPlugin (DrawSVGPlugin);
 
     function init(){    
 
-        gsap.set(["#outline-dash", "#icons", "#music", "#speedometer", "#leather", "#red-arrow", "#IconA", "#IconB", "#IconC",  "#IconD" ], {alpha:0})
+        gsap.set(["#outline-dash", "#icons", "#leather", "#IconA", "#IconB", "#IconC",  "#IconD" ], {alpha:0})
 
 
     }
@@ -103,18 +103,26 @@ gsap.registerPlugin (DrawSVGPlugin);
 
         tl.to ("#weather",{duration:1, alpha:0})
 
+        return tl;
 
+    }
 
-    
+    function musicTL(){
+        let tl = gsap.timeline();
+
+        tl.from ("#music",{duration:1, alpha:0}, "houdini")
+
+        tl.to ("#music",{duration:1, y:"-=185", x:"+=450"}, "houdini")
+
+        tl.to ("#music",{duration:1, scale:2, transformOrigin:"center"})
+
+        tl.to ("#music",{duration:1, alpha:0})
+
 
 
         return tl;
 
     }
-
-
-
-
 
 
 
@@ -125,9 +133,9 @@ gsap.registerPlugin (DrawSVGPlugin);
         tl.from ("#speedometer",{duration:1, alpha:0, scale:10, transformOrigin:"center"}, "sp")
         .to ("#speedometer",{duration:1, y:"-=100", x:"+=133"}, "sp")
 
-        .from ("#_red-arrow_",{duration:1, rotation:"180",transformOrigin:"right"})
+        .from ("#red-arrow",{duration:1, rotation:"180",transformOrigin:"right", alpha:0})
 
-        .from ("#numbers",{duration:.5, alpha:0, scale:3} )
+    
 
         return tl;
 
@@ -147,6 +155,7 @@ gsap.set('#svg-container',{visibility:"visible"});
 mainTL.add(fadeInTL())
       .add(FuelTL())
       .add(weatherTL())
+      .add(musicTL())
       .add(SpeedTL())
      
 
