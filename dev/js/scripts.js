@@ -17,7 +17,7 @@ gsap.registerPlugin (DrawSVGPlugin);
 
     function init(){    
 
-        gsap.set(["#outline-dash", "#icons", "#music", "#speedometer", "#leather"], {alpha:0})
+        gsap.set(["#outline-dash", "#icons", "#music", "#speedometer", "#leather", "#red-arrow", "#IconA", "#IconB", "#IconC",  "#IconD" ], {alpha:0})
 
 
     }
@@ -26,7 +26,7 @@ gsap.registerPlugin (DrawSVGPlugin);
         let tl = gsap.timeline();
 
 
-        
+        tl.from ("#black",{alpha:0})
 
         tl.from ("#Jag-logo",{duration:1, alpha:0, scale:10, transformOrigin:"center"})
         .from ("#_Text_",{duration:1, alpha:0})
@@ -51,6 +51,25 @@ gsap.registerPlugin (DrawSVGPlugin);
 
         
         .from ("#_fuel-tabs_",{duration:1, alpha:0})
+
+        .from("#orange-ft-1",{duration:0.5, alpha:0})
+        .to("#orange-ft-1",{duration:0.5, alpha:0})
+        .from("#orange-ft-2",{duration:0.5, alpha:0})
+        .to("#orange-ft-2",{duration:0.5, alpha:0})
+        .from("#orange-ft-3",{duration:0.5, alpha:0})
+        .to("#orange-ft-3",{duration:0.5, alpha:0})
+        .from("#orange-ft-4",{duration:0.5, alpha:0})
+        .to("#orange-ft-4",{duration:0.5, alpha:0})
+        .from("#orange-ft-5",{duration:0.5, alpha:0})
+        .to("#orange-ft-5",{duration:0.5, alpha:0})
+
+
+        
+
+
+
+
+
         .to ("#_pump_",{duration:1, scale:150, transformOrigin: "center"})
 
         .to ("#fuel-indicator",{duration:1, alpha:0})
@@ -68,10 +87,21 @@ gsap.registerPlugin (DrawSVGPlugin);
 
         tl.from ("#weather",{duration:1, alpha:0}, "w1")
 
-        tl.to ("#weather",{duration:1, y:"-=235", x:"-=450"}, "w1")
+        tl.to ("#weather",{duration:1, y:"-=185", x:"-=450"}, "w1")
+
+        tl.to ("#weather",{duration:1, scale:2, transformOrigin:"center"})
+
+        .to("#_d1_",{duration:1, y:"+=20", x:"-=5", alpha:0}, "drops")
+        .to("#_d2_",{duration:1, y:"+=20", x:"-=5", alpha:0}, "drops")
+        .to("#_d3_",{duration:1, y:"+=20", x:"-=5", alpha:0}, "drops")
 
 
+        .to("#_d1_",{duration:0.5, y:"-=20", x:"+=5", alpha:100}, "still")
+        .to("#_d2_",{duration:0.5, y:"-=20", x:"+=5", alpha:100}, "still")
+        .to("#_d3_",{duration:0.5, y:"-=20", x:"+=5", alpha:100}, "still")
+       
 
+        tl.to ("#weather",{duration:1, alpha:0})
 
 
 
