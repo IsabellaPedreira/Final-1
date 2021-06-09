@@ -36,8 +36,6 @@ gsap.registerPlugin (DrawSVGPlugin);
         .to("#Jag-logo", {duration:1, alpha:0})
     
     
-    
-
         return tl;
 
     }
@@ -52,25 +50,27 @@ gsap.registerPlugin (DrawSVGPlugin);
         
         .from ("#_fuel-tabs_",{duration:1, alpha:0})
 
-        .from("#orange-ft-1",{duration:0.5, alpha:0})
-        .to("#orange-ft-1",{duration:0.5, alpha:0})
-        .from("#orange-ft-2",{duration:0.5, alpha:0})
-        .to("#orange-ft-2",{duration:0.5, alpha:0})
-        .from("#orange-ft-3",{duration:0.5, alpha:0})
-        .to("#orange-ft-3",{duration:0.5, alpha:0})
-        .from("#orange-ft-4",{duration:0.5, alpha:0})
-        .to("#orange-ft-4",{duration:0.5, alpha:0})
-        .from("#orange-ft-5",{duration:0.5, alpha:0})
-        .to("#orange-ft-5",{duration:0.5, alpha:0})
+        // .from("#orange-ft-1",{duration:0.5, alpha:0})
+        // .to("#orange-ft-1",{duration:0.5, alpha:0})
+        // .from("#orange-ft-2",{duration:0.5, alpha:0})
+        // .to("#orange-ft-2",{duration:0.5, alpha:0})
+        // .from("#orange-ft-3",{duration:0.5, alpha:0})
+        // .to("#orange-ft-3",{duration:0.5, alpha:0})
+        // .from("#orange-ft-4",{duration:0.5, alpha:0})
+        // .to("#orange-ft-4",{duration:0.5, alpha:0})
+        // .from("#orange-ft-5",{duration:0.5, alpha:0})
+        // .to("#orange-ft-5",{duration:0.5, alpha:0})
+
+        .to("#_ft1_", {fill:"#F7941D", duration:0.25})
+        .to("#_ft2_", {fill:"#F7941D", duration:0.25})
+        .to("#_ft3_", {fill:"#F7941D", duration:0.25})
+        .to("#_ft4_", {fill:"#F7941D", duration:0.25})
+        .to("#_ft5_", {fill:"#F7941D", duration:0.5})
 
 
         
 
-
-
-
-
-        .to ("#_pump_",{duration:1, scale:150, transformOrigin: "center"})
+        .to ("#_pump_",{duration:1, scale:160, transformOrigin: "center"})
 
         .to ("#fuel-indicator",{duration:1, alpha:0})
 
@@ -125,8 +125,6 @@ gsap.registerPlugin (DrawSVGPlugin);
     }
 
 
-
-
     function SpeedTL(){
         let tl = gsap.timeline();
 
@@ -135,11 +133,35 @@ gsap.registerPlugin (DrawSVGPlugin);
 
         .from ("#red-arrow",{duration:1, rotation:"180",transformOrigin:"right", alpha:0})
 
-    
+        tl.to ("#speedometer",{duration:1, alpha:0})
 
         return tl;
 
     }
+
+
+
+    // function DashboardTL(){
+    //     let tl = gsap.timeline();
+
+    //     tl.from ("#outline-dash","#icons", "#leather", "#IconA", "#IconB", "#IconC",  "#IconD"{duration:1, alpha:0, scale:10, transformOrigin:"center"}, "db1")
+    //     .to ("#outline-dash","#icons", "#leather", "#IconA", "#IconB", "#IconC",  "#IconD",{duration:1, y:"-=100", x:"+=133"}, "db1")
+
+    //     return tl;
+
+    // }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -157,6 +179,7 @@ mainTL.add(fadeInTL())
       .add(weatherTL())
       .add(musicTL())
       .add(SpeedTL())
+    //   .add(DashboardTL())
      
 
 
