@@ -147,24 +147,25 @@ gsap.registerPlugin (DrawSVGPlugin);
     function DashboardTL(){
         let tl = gsap.timeline();
 
+        
         tl.from (["#outline-dash", "#leather"], {duration:1, alpha:0, scale:10, transformOrigin:"center"}, "db1")
         // .to ("#outline-dash","#icons", "#leather", "#IconA", "#IconB", "#IconC",  "#IconD",{duration:1, y:"-=100", x:"+=133"}, "db1")
 
-        tl.to ("#speedometer",{duration:1, alpha:1, svgOrigin:"0 0", x:0, y:0})
-        tl.to ("#red-arrow",{duration:1, alpha:1, svgOrigin:"0 0", x:0, y:0})
-        tl.to ("#weather",{duration:1, alpha:1, scale:1, x:0, y:0})
-        tl.to ("#music",{duration:1, alpha:1, scale:1, x:0, y:0})
-        tl.to ("#fuel-indicator",{duration:1, svgOrigin:"0 0", alpha:1, scale:1})
-        tl.to ("#Jag-logo",{duration:1, alpha:1, scale:1, x:0, y:0})
-        
-        tl.from ([ "#IconA", "#IconB", "#IconC", "#IconD"], {duration:1, alpha:0, stagger:0.1, y:"-=25"})
-        
-        
-        
-        
-        
-        ;
+ 
 
+        .to ("#speedometer",{duration:1, alpha:1, svgOrigin:"0 0", x:0, y:0})
+        .to ("#red-arrow",{duration:1, alpha:1, svgOrigin:"0 0", x:0, y:0})
+        .to ("#weather",{duration:1, alpha:1, scale:1, x:0, y:0})
+        .to ("#music",{duration:1, alpha:1, scale:1, x:0, y:0})
+        .set("#_pump_",{scale:1, transformOrigin: "center"})
+        .to("#fuel-indicator",{duration:1, alpha:1, x:0, y:0, scale:1})
+        .to ("#Jag-logo",{duration:1, alpha:1, scale:1, x:0, y:0})
+        .from ([ "#IconA", "#IconB", "#IconC", "#IconD"], {duration:1, alpha:0, stagger:0.1, y:"-=25"})
+
+ 
+
+
+        ;
 
 
 
