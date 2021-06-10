@@ -61,10 +61,10 @@ gsap.registerPlugin (DrawSVGPlugin);
         // .from("#orange-ft-5",{duration:0.5, alpha:0})
         // .to("#orange-ft-5",{duration:0.5, alpha:0})
 
-        .to("#_ft1_", {fill:"#F7941D", duration:0.25})
-        .to("#_ft2_", {fill:"#F7941D", duration:0.25})
-        .to("#_ft3_", {fill:"#F7941D", duration:0.25})
-        .to("#_ft4_", {fill:"#F7941D", duration:0.25})
+        .to("#_ft1_", {fill:"#F7941D", duration:0.35})
+        .to("#_ft2_", {fill:"#F7941D", duration:0.35})
+        .to("#_ft3_", {fill:"#F7941D", duration:0.35})
+        .to("#_ft4_", {fill:"#F7941D", duration:0.35})
         .to("#_ft5_", {fill:"#F7941D", duration:0.5})
 
 
@@ -153,8 +153,9 @@ gsap.registerPlugin (DrawSVGPlugin);
         tl.to ("#speedometer",{duration:1, alpha:1, svgOrigin:"0 0", x:0, y:0})
         tl.to ("#red-arrow",{duration:1, alpha:1, svgOrigin:"0 0", x:0, y:0})
         tl.to ("#weather",{duration:1, alpha:1, scale:1, x:0, y:0})
-        tl.to ("#music",{duration:1, alpha:1, svgOrigin:"0 0", x:0, y:0})
-        tl.to ("#speedometer",{duration:1, alpha:1, svgOrigin:"0 0", x:0, y:0})
+        tl.to ("#music",{duration:1, alpha:1, scale:1, x:0, y:0})
+        tl.to ("#fuel-indicator",{duration:1, svgOrigin:"0 0", alpha:1, scale:1})
+        tl.to ("#Jag-logo",{duration:1, alpha:1, scale:1, x:0, y:0})
         
         tl.from ([ "#IconA", "#IconB", "#IconC", "#IconD"], {duration:1, alpha:0, stagger:0.1, y:"-=25"})
         
@@ -211,6 +212,6 @@ mainTL.add(fadeInTL())
 
 ;//tl END
 
-mainTL.seek("target");
+// mainTL.seek("target");
 
 
